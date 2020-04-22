@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  background: purple;
+  display: flex;
+  align-items: center;
+}
+
+.small, .big {
+  display: block;
+  height: 30px;
+  background: cyan;
+  margin: 10px;
+}
+
+.small {
+  width: 100px;
+}
+
+.big {
+  width: 150px;
+}
+
+main {
+  background: yellow;
+  width: 70%;
+  height: 500px;
+}
+
+aside {
+  background: green;
+  width: 30%;
+  height: 500px;
+}

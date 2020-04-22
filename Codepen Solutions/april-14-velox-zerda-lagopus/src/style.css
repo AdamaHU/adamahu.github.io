@@ -1,0 +1,11 @@
+p {
+  background: #0D91A1;
+  color: #015668;
+  width: 20%;
+  height: 100px;
+  margin: 20px;
+  padding: 10px;
+  border: 5px solid #7DCE94;
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+}

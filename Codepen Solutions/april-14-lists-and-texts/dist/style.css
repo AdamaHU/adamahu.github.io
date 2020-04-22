@@ -1,0 +1,27 @@
+main {
+  width: 50%;
+  margin: auto;
+}
+h1 {
+  color: #031A6B;
+  text-align: center;
+}
+
+h2 {
+  color: #087CA7;
+}
+
+.circle{
+  list-style-type: circle;
+}
+
+.roman {
+  list-style-type: upper-roman;
+  text-decoration: underline;
+  color: #00A5CF;
+}
+
+.colored_li {
+  color: black;
+  text-decoration: underline;
+}

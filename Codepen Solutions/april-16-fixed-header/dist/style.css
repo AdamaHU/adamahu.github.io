@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  background: purple;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.small, .big {
+  display: block;
+  height: 30px;
+  background: cyan;
+  margin: 10px;
+}
+
+.small {
+  width: 100px;
+}
+
+.big {
+  width: 150px;
+}
+
+.first {
+  margin-left: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 80px;
+}
+
+main {
+  display: block;
+  background: yellow;
+  flex-grow: 4;
+  height: 500px;
+  margin-right: 100px;
+}
+
+aside {
+  display: block;
+  background: green;
+  flex-grow: 2;
+  height: 500px;
+  margin-left: 100px;
+}
+
+footer {
+  display: block;
+  height: 80px;
+  width: 100%;
+  background: lightgray;
+  margin: 10px 100px;
+}
