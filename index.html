@@ -32,6 +32,8 @@ SOFTWARE.
     <style type="text/css">
     body{
         background-image: url("background.jpg");
+        display: flex;
+        justify-content: center;
     }
     text{
         font-family:Helvetica, Arial, sans-serif;
@@ -39,14 +41,12 @@ SOFTWARE.
         pointer-events:none;
     }
     #chart{
-        position:absolute;
         width:500px;
         height:500px;
         top:0;
         left:0;
     }
     #question{
-        position: absolute;
         width:400px;
         height:500px;
         top:0;
@@ -57,23 +57,30 @@ SOFTWARE.
         font-weight: bold;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: white;
-        position: absolute;
-        padding: 0;
+        padding: 0 40px;
         margin: 0;
-        top:50%;
-        -webkit-transform:translate(0,-50%);
-                transform:translate(0,-50%);
+        display: flex;
+        height: 500px;
+        align-items: center;
+
+    }
+    .placeholder{
+        display: flex;
+        justify-content: center;
     }
     </style>
     
 </head>
 <body>
-    <div id="chart"></div>
-    <div id="question"><h1></h1></div>
+    <div class="placeholder">
+        <div id="chart"></div>
+        <div id="question"><h1></h1></div>
+    </div>
+    
     
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
-        var padding = {top:20, right:40, bottom:0, left:0},
+        var padding = {top:20, right:40, bottom:20, left:20},
             w = 500 - padding.left - padding.right,
             h = 500 - padding.top  - padding.bottom,
             r = Math.min(w, h)/2,
@@ -91,7 +98,7 @@ SOFTWARE.
                     {"label":"Test 2",  "value":1,  "question":"Look into the mirror! You will only see yourself clearly when you're awake"},
                     {"label":"Test 3",  "value":1,  "question":"Buy a spinner! If it doesn't flip over, you're probably dreaming... Right, Mr. Cobb?"},
                     {"label":"Test 4",  "value":1,  "question":"Look at the clock a few times! Time will change inconsistently in a dream"},
-                    {"label":"Test 5",  "value":1,  "question":"Try pushing your fingers through the palm of your other hand! If they go through, you're either asleep or the Avatar"},
+                    {"label":"Test 5",  "value":1,  "question":"Push your fingers through your other hand! If they go through, you're either asleep or the Avatar"},
                     {"label":"Test 6",  "value":1,  "question":"Try to hold your breath! If you ALMOST suffocate, you're awake"},
                     {"label":"Test 7",  "value":1,  "question":"Try reading a sentence twice! If the text changes, you're probably dreaming"},
                     {"label":"Test 8",  "value":1,  "question":"Jump! Did you start floating? That's sus..."},
@@ -125,7 +132,6 @@ SOFTWARE.
             .append("g")
             .attr("class", "slice");
             
-
         arcs.append("path")
             .attr("fill", function(d, i){ return color(i); })
             .attr("d", function (d) { return arc(d); });
@@ -207,7 +213,7 @@ SOFTWARE.
             .attr("cx", 0)
             .attr("cy", 0)
             .attr("r", 60)
-            .style({"fill":"white","cursor":"pointer"});
+            .style({"fill":"white","cursor":"pointer",});
 
         //spin text
         container.append("text")
@@ -244,5 +250,6 @@ SOFTWARE.
         }
 
     </script>
+    
 </body>
 </html>
